@@ -117,19 +117,42 @@
             <groupId>net.imagej</groupId>
             <artifactId>imagej</artifactId>
         </dependency>
-        <!-- SciJava dependencies -->
+       
+	   <!-- SciJava dependencies -->
         <dependency>
             <groupId>org.scijava</groupId>
             <artifactId>scijava-common</artifactId>
             <type>jar</type>
         </dependency>
-        <!-- JavaCV dependencies -->
-        <dependency>
-            <groupId>org.bytedeco</groupId>
-            <artifactId>javacv-platform</artifactId>
-            <version>1.4.2</version>
-        </dependency>
-
+        
+		<!-- OpenCV dependencies -->
+		<dependency>
+		  <groupId>org.bytedeco.javacpp-presets</groupId>
+		  <artifactId>opencv</artifactId>
+		  <version>3.4.2-1.4.2</version>
+		</dependency>
+		
+		<!-- JavaCPP dependencies -->
+		<dependency>
+		  <groupId>org.bytedeco</groupId>
+		  <artifactId>javacpp</artifactId>
+		  <version>1.4.2</version>
+		</dependency>
+		
+		<!-- JavaCV dependencies -->
+		<dependency>
+		  <groupId>org.bytedeco</groupId>
+		  <artifactId>javacv</artifactId>
+		  <version>1.4.2</version>
+		</dependency>
+		
+		<!-- OpenCV Platform dependencies -->
+		<dependency>
+		  <groupId>org.bytedeco.javacpp-presets</groupId>
+		  <artifactId>opencv-platform</artifactId>
+		  <version>3.4.2-1.4.2</version>
+		</dependency>
+		
     </dependencies>
 
     <repositories>
