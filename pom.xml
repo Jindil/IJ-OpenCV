@@ -24,7 +24,7 @@
     <licenses>
         <license>
             <name>GPLv3.0</name>
-	    <url>https://www.gnu.org/licenses/gpl-3.0.html</url>
+        <url>https://www.gnu.org/licenses/gpl-3.0.html</url>
             <distribution>repo</distribution>
         </license>
     </licenses>
@@ -118,41 +118,41 @@
             <artifactId>imagej</artifactId>
         </dependency>
        
-	   <!-- SciJava dependencies -->
+       <!-- SciJava dependencies -->
         <dependency>
             <groupId>org.scijava</groupId>
             <artifactId>scijava-common</artifactId>
             <type>jar</type>
         </dependency>
         
-		<!-- OpenCV dependencies -->
-		<dependency>
-		  <groupId>org.bytedeco.javacpp-presets</groupId>
-		  <artifactId>opencv</artifactId>
-		  <version>3.4.2-1.4.2</version>
-		</dependency>
-		
-		<!-- JavaCPP dependencies -->
-		<dependency>
-		  <groupId>org.bytedeco</groupId>
-		  <artifactId>javacpp</artifactId>
-		  <version>1.4.2</version>
-		</dependency>
-		
-		<!-- JavaCV dependencies -->
-		<dependency>
-		  <groupId>org.bytedeco</groupId>
-		  <artifactId>javacv</artifactId>
-		  <version>1.4.2</version>
-		</dependency>
-		
-		<!-- OpenCV Platform dependencies -->
-		<dependency>
-		  <groupId>org.bytedeco.javacpp-presets</groupId>
-		  <artifactId>opencv-platform</artifactId>
-		  <version>3.4.2-1.4.2</version>
-		</dependency>
-		
+        <!-- OpenCV dependencies -->
+        <dependency>
+          <groupId>org.bytedeco.javacpp-presets</groupId>
+          <artifactId>opencv</artifactId>
+          <version>3.4.2-1.4.2</version>
+        </dependency>
+        
+        <!-- JavaCPP dependencies -->
+        <dependency>
+          <groupId>org.bytedeco</groupId>
+          <artifactId>javacpp</artifactId>
+          <version>1.4.2</version>
+        </dependency>
+        
+        <!-- JavaCV dependencies -->
+        <dependency>
+          <groupId>org.bytedeco</groupId>
+          <artifactId>javacv</artifactId>
+          <version>1.4.2</version>
+        </dependency>
+        
+        <!-- OpenCV Platform dependencies -->
+        <dependency>
+          <groupId>org.bytedeco.javacpp-presets</groupId>
+          <artifactId>opencv-platform</artifactId>
+          <version>3.4.2-1.4.2</version>
+        </dependency>
+        
     </dependencies>
 
     <repositories>
