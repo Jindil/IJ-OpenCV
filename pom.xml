@@ -124,34 +124,22 @@
             <artifactId>scijava-common</artifactId>
             <type>jar</type>
         </dependency>
+		
+		<!-- OpenCV platform : the bad guy overwriting the OpenCV package (eventhough both are needed) -->
+		<dependency>
+		  <groupId>org.bytedeco.javacpp-presets</groupId>
+		  <artifactId>opencv-platform</artifactId>
+		  <version>3.4.3-1.4.3</version>
+		</dependency>
         
-        <!-- OpenCV dependencies -->
+        <!-- OpenCV (JavaCPP comes with it) -->
         <dependency>
           <groupId>org.bytedeco.javacpp-presets</groupId>
           <artifactId>opencv</artifactId>
-          <version>3.4.2-1.4.2</version>
+          <version>3.4.3-1.4.3</version>
         </dependency>
-        
-        <!-- JavaCPP dependencies -->
-        <dependency>
-          <groupId>org.bytedeco</groupId>
-          <artifactId>javacpp</artifactId>
-          <version>1.4.2</version>
-        </dependency>
-        
-        <!-- JavaCV dependencies -->
-        <dependency>
-          <groupId>org.bytedeco</groupId>
-          <artifactId>javacv</artifactId>
-          <version>1.4.2</version>
-        </dependency>
-        
-        <!-- OpenCV Platform dependencies -->
-        <dependency>
-          <groupId>org.bytedeco.javacpp-presets</groupId>
-          <artifactId>opencv-platform</artifactId>
-          <version>3.4.2-1.4.2</version>
-        </dependency>
+		
+
         
     </dependencies>
 
