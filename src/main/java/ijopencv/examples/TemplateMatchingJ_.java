@@ -52,9 +52,10 @@ public class TemplateMatchingJ_ implements Command {
     public void run() {
         
     	// Check if searchRoi and crop accordingly
-    	Roi searchRoi = targetImage.getRoi();
-        ImagePlus searchedImage = new ImagePlus();
-    	if (searchRoi.isArea() && (searchRoi.getType() == Roi.RECTANGLE)) {
+    	Roi searchRoi = targetImage.getRoi();    	
+    	ImagePlus searchedImage = new ImagePlus();
+    	
+    	if ( (searchRoi != null) && (searchRoi.isArea()) && (searchRoi.getType() == Roi.RECTANGLE) ) {
 
             // Crop the target image to the search region
             searchedImage = targetImage.crop();
@@ -63,6 +64,12 @@ public class TemplateMatchingJ_ implements Command {
         else {
         	searchedImage = targetImage;
         }
+    	
+    	// Check that template is smaller than searched image
+    	if ( (searchedImage.getWidth()<templateImage.getWidth() ) || ( searchedImage.getHeight()<templateImage.getHeight() ) ) {
+    		IJ.error("Template is larger in width and/or height than the target image or search region");
+    		throw new IllegalArgumentException("Template is larger in width and/or height than the target image or search region");
+    	}
         
         //Converters
         ImagePlusMatConverter ic = new ImagePlusMatConverter();
@@ -101,7 +108,7 @@ public class TemplateMatchingJ_ implements Command {
             p = locations.get(i);
             solution = new opencv_core.Rect(p.x(), p.y(), template.cols(), template.rows());
             solutionIJ = rc.convert(solution, Roi.class);
-            rm.add(original, solutionIJ, i);
+            rm.add(targetImage, solutionIJ, i);
 
         }
 
